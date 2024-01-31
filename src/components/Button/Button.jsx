@@ -9,6 +9,7 @@ const Button = ({
   fullWidth,
   secondary,
   target,
+  style
 }) => {
   return (
     <button
@@ -17,6 +18,7 @@ const Button = ({
       onClick={onClick}
       disabled={disabled}
       title={title}
+      style={style}
     >
       {children}
     </button>

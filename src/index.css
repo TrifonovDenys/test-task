@@ -1,4 +1,5 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
+/* bring in normalize.css styles */
 
 body {
   margin: 0;
@@ -15,29 +16,29 @@ code {
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    outline: 0;
-    outline-offset: 0;
-    pointer-events: none;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  outline-offset: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.custom_checkbox{
-    width: 16px;
-    height: 16px;
-    border: 1.25px solid #757575;
-    border-radius: 4px;
-    margin-right: 12px;
-    appearance: none;
-  }
+.custom_checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #757575;
+  border-radius: 4px;
+  margin-right: 12px;
+  appearance: none;
+}
 
 .custom_checkbox {
   font-size: 12px;
@@ -49,7 +50,7 @@ code {
 
 }
 
-.custom_checkbox{
+.custom_checkbox {
   color: red;
   text-indent: 4px;
 }
@@ -76,19 +77,19 @@ input[type=range]:focus {
 
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 3px;
+  height: 1px;
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 0px 0px 0px #000000;
-  background: grey;
-  border-radius: 2px;
+  background: rgb(0, 0, 0);
+  border-radius: 1px;
   border: 0px solid #000000;
 }
 
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px #000000;
-  height: 18px;
-  width: 18px;
+  height: 15px;
+  width: 15px;
   border-radius: 25px;
   background: #ffc107;
   cursor: pointer;
@@ -163,7 +164,7 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #2497E3;
 } */
-img{
+img {
   display: block;
   height: 100%;
   width: 100%;

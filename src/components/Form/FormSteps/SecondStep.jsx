@@ -1,52 +1,58 @@
-import Button from 'components/Button/Button';
 import TextInput from './TextInput';
 import ChekedLabel from './ChekedLabel';
+import Col from 'react-bootstrap/Col';
+import Stack from 'react-bootstrap/Stack';
+import { useScreenSize } from 'components/Button/ScreenSizeTracker';
 
 const SecondStep = () => {
+
+  const { width } = useScreenSize();
   return (
-    <div className="d-flex flex-column gap-10">
-      <h2>Рассчитать стоимость ремонта квартиры за 1 минуту</h2>
+    <Col>
+      <Stack gap={10}>
+        <h2>Рассчитать стоимость ремонта квартиры за 1 минуту</h2>
 
-      <div>
-        <h3>Выберете удобный формат консультации</h3>
+        <div>
+          <h3>{width > 550 ? 'Выберете удобный формат консультации' : "Как с вами связаться?"}</h3>
 
-        <div className="d-flex flex-column gap-2">
-          <ChekedLabel
-            text="Проконсультироватся по телефону"
-            htmlFor=""
-            type="checkbox"
-            name=""
-            id=""
-          />
+          <Stack gap={2}>
+            <ChekedLabel
+              text={width > 550 ? "Вайбер" : "Пришлите мне в Viber"}
+              htmlFor=""
+              type="checkbox"
+              name=""
+              id=""
+            />
 
-          <ChekedLabel text="Вайбер" htmlFor="" type="checkbox" name="" id="" />
+            <ChekedLabel text="Проконсультируйте по телефону" htmlFor="" type="checkbox" name="" id="" />
 
-          <ChekedLabel
-            text="Видеозвонок/встреча в офисе"
-            htmlFor=""
-            type="checkbox"
-            name=""
-            id=""
-          />
+            <ChekedLabel
+              text="Видеозвонок/встреча в офисе"
+              htmlFor=""
+              type="checkbox"
+              name=""
+              id=""
+            />
+          </Stack>
         </div>
-      </div>
+        <Stack gap={3}>
+          <TextInput type="text" placeholder="Ведите имя" name="name" id="name" />
+          <TextInput
+            type="text"
+            placeholder="Ведите телефон"
+            name="tel"
+            id="tel"
+          />
+          <TextInput
+            type="text"
+            placeholder="Коментарий"
+            name="comment"
+            id="comment"
+          />
+        </Stack>
+      </Stack>
+    </Col>
 
-      <div className="d-flex flex-column w-75-sm w-100 gap-3">
-        <TextInput type="text" placeholder="Ведите имя" name="name" id="name" />
-        <TextInput
-          type="text"
-          placeholder="Ведите телефон"
-          name="tel"
-          id="tel"
-        />
-        <TextInput
-          type="text"
-          placeholder="Коментарий"
-          name="comment"
-          id="comment"
-        />
-      </div>
-    </div>
   );
 };
 

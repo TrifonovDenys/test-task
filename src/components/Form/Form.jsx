@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import FirstStep from './FormSteps/FirstStep';
 import SecondStep from './FormSteps/SecondStep';
 import Button from 'components/Button/Button';
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 const Form = () => {
   const [page, setPage] = useState(1);
 
-  console.log(page);
   const pages = [
     {
       page: 1,
@@ -20,44 +24,48 @@ const Form = () => {
   ];
 
   return (
-    <div className="col-12 col-sm-7 bg-light py-12-sm ps-16-sm pe-20-sm py-5 px-5">
-      <form>
-        {pages.map(p => (
-          <div
-            key={p.page}
-            className={`${p.page !== page ? 'visually-hidden' : ''}`}
-          >
-            {p.element}
-          </div>
-        ))}
+    <Container fluid="md">
+      <Row>
+        <Col className="bg-light-subtle py-6 px-8" md={7}>
+          <form>
+            {pages.map(p => (
+              <div
+                key={p.page}
+                className={`${p.page !== page ? 'visually-hidden' : ''}`}
+              >
+                {p.element}
+              </div>
+            ))}
 
-        <div>
-          {page === 1 && (
-            <Button
-              className={`border-0 bg-transparent fs-5 text-body-tertiary opacity-50`}
-              type="button"
-              onClick={() => {
-                setPage(currPage => currPage + 1);
-              }}
-            >
-              К следующему вопросу &rarr;
-            </Button>
-          )}
+            <div>
+              {page === 1 && (
+                <Button
+                  className={`border-0 bg-transparent fs-6 text-body-tertiary opacity-50`}
+                  type="button"
+                  onClick={() => {
+                    setPage(currPage => currPage + 1);
+                  }}
+                >
+                  К следующему вопросу &rarr;
+                </Button>
+              )}
 
-          {page === 2 && (
-            <Button
-              className={`border-0 bg-transparent fs-5 text-body-tertiary opacity-50`}
-              type="button"
-              onClick={() => {
-                setPage(currPage => currPage - 1);
-              }}
-            >
-              &larr; Вернутся к пердыдущему вопросу
-            </Button>
-          )}
-        </div>
-      </form>
-    </div>
+              {page === 2 && (
+                <Button
+                  className={`border-0 bg-transparent fs-6 text-body-tertiary opacity-50`}
+                  type="button"
+                  onClick={() => {
+                    setPage(currPage => currPage - 1);
+                  }}
+                >
+                  &larr; Вернутся к пердыдущему вопросу
+                </Button>
+              )}
+            </div>
+          </form>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
