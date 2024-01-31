@@ -1,16 +1,22 @@
+import Form from './Form/Form';
+import HeroImg from './HeroImg/HeroImg';
+import SidePanel from './SidePanel/SidePanel';
+
 export const App = () => {
   return (
     <div
+      className="app"
       style={{
         height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        width: '100%',
+        // display: 'flex',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-      React homework template
+      <HeroImg />
+      <Form />
+      <SidePanel />
     </div>
   );
 };
