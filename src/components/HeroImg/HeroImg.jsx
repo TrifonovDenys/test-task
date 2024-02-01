@@ -6,8 +6,8 @@ import { useScreenSize } from 'components/Button/ScreenSizeTracker';
 const HeroImg = () => {
   const { width } = useScreenSize();
   return (
-    <Container>
-      <Row className='p-0 overflow-hidden' style={{ height: "120px" }}>
+    <Container style={{ height: `${width > 550 ? '100%' : ''}` }} >
+      <Row className='p-0 overflow-hidden' style={{ height: `${width > 550 ? '100%' : '120px'}` }}>
         <Col className='p-0'>
           <img className="object-fit-cover" src={img} alt="img" />
         </Col>

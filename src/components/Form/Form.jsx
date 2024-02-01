@@ -26,7 +26,7 @@ const Form = () => {
   return (
     <Container fluid="md">
       <Row>
-        <Col className="bg-light-subtle py-6 px-8" md={7}>
+        <Col className="bg-light-subtle py-10 px-8">
           <form>
             {pages.map(p => (
               <div

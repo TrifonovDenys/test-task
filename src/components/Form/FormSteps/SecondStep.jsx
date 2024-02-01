@@ -3,6 +3,7 @@ import ChekedLabel from './ChekedLabel';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
 import { useScreenSize } from 'components/Button/ScreenSizeTracker';
+import SubTitle from './SubTitle';
 
 const SecondStep = () => {
 
@@ -13,7 +14,7 @@ const SecondStep = () => {
         <h2>Рассчитать стоимость ремонта квартиры за 1 минуту</h2>
 
         <div>
-          <h3>{width > 550 ? 'Выберете удобный формат консультации' : "Как с вами связаться?"}</h3>
+          <SubTitle>{width > 550 ? 'Выберете удобный формат консультации' : "Как с вами связаться?"}</SubTitle>
 
           <Stack gap={2}>
             <ChekedLabel
