@@ -83,16 +83,17 @@ const FirstStep = () => {
             style={{
               marginLeft: '-10px',
             }}
-            className={`${width > 550 ? 'w-75' : ''} fs-6`}
+            className={`${width > 550 ? 'w-75' : ''}`}
           >
             <p
               style={{
+                fontSize: '0.9rem',
                 marginLeft: `${rangeMark / (width > 550 ? 1.6 : 1.7)}%`,
                 marginRight: '-20px',
                 marginBottom: '-10px',
               }}
             >
-              {rangeMark}m2
+              {rangeMark}&nbsp;m2
             </p>
           </div>
           <input
