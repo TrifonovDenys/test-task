@@ -20,8 +20,8 @@ export const App = () => {
       <Container>
         <Row>
           <Col md={2} className='p-0'><HeroImg /></Col>
-          <Col md={7} className='p-0'><Form /></Col>
-          <Col md={3} className='p-0'><SidePanel /></Col>
+          <Col md={6} className='p-0'><Form /></Col>
+          <Col md={4} className='p-0'><SidePanel /></Col>
         </Row>
       </Container>
     </div>

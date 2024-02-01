@@ -63,9 +63,9 @@ const FirstStep = () => {
             />
           </Stack>
         </div>
-
+        {/* //TODO */}
         <div>
-          <SubTitle>Укажите площадь</SubTitle>
+          <SubTitle>{width > 550 ? "Укажите площадь:" : "Укажите площадь"}</SubTitle>
           <p style={{ marginLeft: `${rangeMark * 1.78}px` }} className="fs-5 my-0">
             {rangeMark}m2
           </p>
