@@ -7,21 +7,21 @@ import Col from 'react-bootstrap/Col';
 export const App = () => {
   return (
     <div
-      className="app"
       style={{
-        // fontFamily: 'MonoCase'
-        // height: '100vh',
-        // width: '100%',
-        // display: 'flex',
-        // fontSize: 40,
-        // color: '#010101',
+        fontFamily: 'Nunito',
       }}
     >
       <Container>
         <Row>
-          <Col md={2} className='p-0'><HeroImg /></Col>
-          <Col md={6} className='p-0'><Form /></Col>
-          <Col md={4} className='p-0'><SidePanel /></Col>
+          <Col md={2} className="p-0">
+            <HeroImg />
+          </Col>
+          <Col md={6} className="p-0">
+            <Form />
+          </Col>
+          <Col md={4} className="p-0">
+            <SidePanel />
+          </Col>
         </Row>
       </Container>
     </div>

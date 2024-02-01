@@ -36,7 +36,6 @@ const Form = () => {
                 {p.element}
               </div>
             ))}
-            {/* //TODO */}
             <div>
               {page === 1 && (
                 <Button
@@ -52,7 +51,7 @@ const Form = () => {
 
               {page === 2 && (
                 <Button
-                  className={`border-0 bg-transparent fs-6 text-body-tertiary opacity-50`}
+                  className={`border-0 bg-transparent fs-6 text-body-tertiary opacity-50 `}
                   type="button"
                   onClick={() => {
                     setPage(currPage => currPage - 1);
